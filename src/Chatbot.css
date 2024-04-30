@@ -61,7 +61,7 @@ body {
   }
   
   .chatbox li.outgoing p {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
   }
   
   .chat-input input {
@@ -154,4 +154,36 @@ body {
     overflow-y: auto;
     height: 472px;
     padding: 30px 20px 100px;
+  }
+
+  .msg-right{
+    position: relative;
+    left: 30%;
+    width: 70%;
+    background-color: rgb(47, 245, 143);
+    color: rgb(10, 0, 0);
+    margin-top: 5%;
+    border-radius: 15px;
+    padding: 15px;
+    padding-bottom: 6px;
+    font-size: 15px;
+    max-width: calc(100% - 66px);
+    box-shadow: rgba(0, 0, 0, 0.13) 0px 1px 0.5px;
+  }
+
+  .chat-name-right {
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 18px;
+    color: rgba(230, 72, 72, 0.829);
+  }
+
+  .chat-time {
+    text-align: right;
+    margin-top: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgb(10, 183, 213);
+    margin-right: -8px;
+    margin-bottom: -4px;
   }

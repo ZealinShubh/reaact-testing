@@ -64,24 +64,41 @@ const Chatbot = () => {
   };
 
   return (
-    <div className={`chatbot ${showChatbot ? 'show' : ''}`}>
+    <div className={`chatbot ${showChatbot ? "show" : ""}`}>
       <button className="chatbot-toggler" onClick={toggleChatbot}>
-        <span className={`material-symbols-rounded ${showChatbot ? 'hide' : ''}`}>mode_comment</span>
-        <span className={`material-symbols-outlined ${showChatbot ? 'show' : ''}`}>close</span>
+        <span
+          className={`material-symbols-rounded ${showChatbot ? "hide" : ""}`}
+        >
+          mode_comment
+        </span>
+        <span
+          className={`material-symbols-outlined ${showChatbot ? "show" : ""}`}
+        >
+          close
+        </span>
       </button>
       <header>
         <h2 id="chatbotTitle">Chatbot</h2>
-        <span className="close-btn material-symbols-outlined" onClick={() => setShowChatbot(false)}>close</span>
+        <span
+          className="close-btn material-symbols-outlined"
+          onClick={() => setShowChatbot(false)}
+        >
+          close
+        </span>
       </header>
       <div>
         <ul className="chatbox">
-          <div className='fixed'>
+          <div className="fixed">
             <span className="material-symbols-outlined">smart_toy</span>
             <p>Hello</p>
           </div>
           {chatMessages.map((message, index) => (
-            <li key={index} className={`chat ${message.type}`}>              
-              <p>{message.message}</p>
+            <li key={index} className={`chat ${message.type}`}>
+              <div className='msg-right'>
+                <div className="chat-name-right">User</div>
+                <p>{message.message}</p>
+                <div className='chat-time'>13:35</div>
+              </div>
             </li>
           ))}
         </ul>
@@ -91,9 +108,15 @@ const Chatbot = () => {
             spellCheck="false"
             required
             value={userMessage}
-            onChange={e => setUserMessage(e.target.value)}
+            onChange={(e) => setUserMessage(e.target.value)}
           ></textarea>
-          <span id="send-btn" className="material-symbols-rounded" onClick={handleMessageSend}>send</span>
+          <span
+            id="send-btn"
+            className="material-symbols-rounded"
+            onClick={handleMessageSend}
+          >
+            send
+          </span>
         </div>
       </div>
     </div>
